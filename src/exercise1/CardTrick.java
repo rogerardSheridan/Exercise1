@@ -24,7 +24,7 @@ public class CardTrick {
 
         for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
-            card.setValue(rand.nextInt(7) + 1); 
+            card.setValue(rand.nextInt(13) + 1); 
             card.setSuit(Card.SUITS[rand.nextInt(4)]);
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
@@ -48,7 +48,7 @@ public class CardTrick {
         
         for(int i = 0; i < hand.length; i++){
             //System.out.println("Card[" + i + "] = Value = " + hand[i].getValue() + " Suit = " + hand[i].getSuit());
-            if(hand[i].getValue() == cardGuess.getValue() && hand[i].getSuit() == cardGuess.getSuit())
+            if(hand[i].getValue() == cardGuess.getValue() && hand[i].getSuit().equals(cardGuess.getSuit()))
                 printInfo();
         }
         
@@ -56,6 +56,7 @@ public class CardTrick {
         
     }
 
+    //I’m done!
     /**
      * A simple method to print out personal information. Follow the instructions to 
      * replace this information with your own.
